@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it" class="has-lab-nav-bottom lab-theme-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mycss.css" />
+    <title>SPLITTER DEMO</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
+      integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body id="body">
+    <div id="slide">
+      <h1 id="title">SPLITTER DEMO</h1>
+    </div>
+  </body>
+  <script src="splitterText.js"></script>
+  <script>
+
+
+    /** available options = {
+     * 
+     * id: the id of the DOM element
+     * containerclass: container class for elements (for your personal CSS)
+     * class: class of the elements (for your personal CSS)
+     * escape: character to use for <br>
+     * from: GSAP animation object
+     * to: GSAP animation object
+     * }
+     * 
+     * AN EXAMPLE DOWN HERE
+     * **/
+   splitterText(
+        
+      {
+      id: "title",
+      containerclass: "mask",
+      class: "splitterLetter",
+      escape: " ",
+      from: {
+        x: "-110%",
+        stagger: {
+          from: "left",
+          amount: 0.5,
+        },
+      },
+      to: {
+        duration: 1,
+        x: "0px",
+
+        stagger: {
+          from: "left",
+          amount: 0.5,
+        },
+      },
+    });
+  </script>
+</html>
